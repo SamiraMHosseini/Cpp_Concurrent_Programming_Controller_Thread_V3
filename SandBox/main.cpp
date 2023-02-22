@@ -256,10 +256,6 @@ int main()
 {
 	START_BANNER_MAIN("Main");
 
-
-
-
-
 	A a("A");
 	B b("B");
 	C c("C");
@@ -278,9 +274,8 @@ int main()
 	std::future<void> taskC = std::async(std::launch::async, std::move(c), std::ref(sharedResource));
 	std::future<void> taskD = std::async(std::launch::async, std::move(d), std::ref(sharedResource));
 
-	std::future<void> taskController = std::async(std::launch::deferred, controller,
-		std::ref(sharedResource));
-
+	//deferred task
+	std::future<void> taskController = std::async(std::launch::deferred, controller, std::ref(sharedResource));
 
 	//Key Press
 	_getch();
@@ -299,9 +294,6 @@ int main()
 	*/
 
 	
-
-
-
 
 
 }
