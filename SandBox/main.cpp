@@ -285,9 +285,9 @@ int main()
 	//Key Press
 	_getch();
 
-	//Signal to the tasks
-
 	Debug::out("a key is pressed\n");
+
+	//Signal to the tasks
 	taskController.get();
 
 	/*
@@ -298,7 +298,7 @@ int main()
 
 	*/
 
-	//std::this_thread::sleep_for(1s);
+	
 
 
 
